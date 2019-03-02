@@ -1,0 +1,367 @@
+.no-mar-pad{
+    margin: 0%;
+    padding: 0%;
+}
+.popover{
+    width: 2000px !important;
+    font-family: 'MTN Sans';
+    font-weight: 200;
+    font-size: 14px;
+    border: 0;
+    box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.08);
+    margin-left: 35px;
+    z-index: 101;
+    left: -26px !important;
+    max-width: 340px !important;
+}
+.readTnC {
+    display: inline-flex;
+    align-items: center;
+}
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: transparent !important;
+}
+.mat-checkbox .mat-checkbox-frame {
+    border-color: #ffcc00;
+}
+.mat-checkbox-checkmark-path {
+    stroke: #000 !important;
+}
+// .mat-ripple-element {
+//     background: #ffcc00 !important;
+// }
+.tooltip-image{
+    cursor: pointer;
+}
+.fa-times{
+    cursor: pointer;
+}
+#page{
+    overflow-y: inherit;
+}
+.page-content{
+    height: auto;
+    // min-height: 60vh;
+   // width: 100vw;
+   // overflow-y: scroll;
+   padding: 0px 0% 0px 4% !important;
+   padding-top: 39px !important;
+}
+.sideImage {
+    width: 100%;
+}
+.mat-card {
+    box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.08) !important;
+    padding: 20px 20px !important;
+}
+.noPadding {
+    padding: 0;
+}
+.noPaddingLeft {
+    padding-left: 0;
+}
+.noPaddingRight {
+    padding-right: 0;
+}
+.noMargin {
+    margin: 0;
+}
+.rechargeCard {
+    width: 100%;
+}
+.buttonRead, .buttonAgree {
+    width: 67%;
+}
+.tooltipButton {
+    background-color: #c1c1c1;
+    color: #fff;
+    margin: 0 !important;
+    margin-left: 5px !important;
+    width: 40px;
+    border-radius: 40px;
+}
+.popover-header {
+    text-align: right;
+}
+.dark-modal .modal-content {
+    background-color: #292b2c;
+    color: white;
+}
+.dark-modal .close {
+    color: white;
+}
+.light-blue-backdrop {
+    background-color: #5cb3fd;
+}
+.closeSymbolModalSpan {
+    float: right;
+}
+.closeSymbolModalButton {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.modal-title {
+    width: 100%;
+    font-size: 36px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.92;
+    // letter-spacing: -1.2px;
+    color: #000000;
+}
+.modal-dialog.modal-dialog-centered {
+    max-width: 50%;
+}
+.modal-body {
+    overflow-y: auto;
+    height: 30vw;
+}
+.modal-content {
+    padding: 1rem;
+}
+.MTNTandC {
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    // letter-spacing: -0.5px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+.MTNOnlineShoppingTandC {
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    // letter-spacing: -0.4px;
+    color: #000000;
+}
+.Note {
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    // letter-spacing: -0.5px;
+    color: #000000;
+}
+.contentNumberHeader {
+    font-size: 11.1px;
+    font-weight: 600;
+}
+.contentNumberText {
+    font-size: 11.1px;
+    font-weight: 200;
+}
+.rechargeCardHeading {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    // letter-spacing: -0.8px;
+    color: #000000;
+}
+.rechargeIndividualItem {
+    font-size: 13px;
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    // letter-spacing: -0.5px;
+    color: #000000;
+}
+.rechargeIndividualValue {
+    font-size: 14px;
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    // letter-spacing: -0.5px;
+    text-align: right;
+    color: #000000;
+}
+.rechargeTotalText {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    // letter-spacing: -0.8px;
+    color: #000000;
+}
+.rechargeTotalValue {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    // letter-spacing: -0.8px;
+    text-align: right;
+    color: #000000;
+}
+.rechargeVATValue {
+    font-size: 12px;
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    // letter-spacing: -0.5px;
+    text-align: right;
+    color: #000000;
+}
+.emailText {
+    font-size: 10px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    // letter-spacing: -0.4px;
+    color: #7f7f7f;
+    padding-bottom: 3px;
+}
+hr {
+    border-top-color: #000000;
+}
+
+// width
+.modal-body::-webkit-scrollbar {
+    width: 10px;
+}
+// Handle
+.modal-body::-webkit-scrollbar-thumb {
+    background: #acacac; 
+    border-radius: 10px;
+}
+
+// Handle on hover
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #acacac; 
+}
+
+@media screen and (max-width: 767px) {
+    .sideImage {
+        display: none;
+    }
+    .page-content {
+        padding: 0px 4% !important;
+        padding-top: 20px !important;
+    }
+    .modal-body {
+        height: 70vw;
+    }
+    .popover{
+        margin-left: 0px;
+        margin-right: 15px;
+        left: -303px !important;
+        max-width: 360px !important;
+    }
+    .popover .arrow {
+        right: 0.3em !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .col-xs-1{
+        width: 8.33% !important;
+    }
+    .col-xs-2{
+        width: 16.66% !important;
+    }
+    .col-xs-3{
+        width: 25% !important;
+    }
+    .col-xs-4{
+        width: 33.33% !important;
+    }
+    .col-xs-5{
+        width: 41.66% !important;
+    }
+    .col-xs-6{
+        width: 50% !important;
+    }
+    .col-xs-7{
+        width: 58.33% !important;
+    }
+    .col-xs-8{
+        width: 66.66% !important;
+    }
+    .col-xs-9{
+        width: 75% !important;
+    }
+    .col-xs-10{
+        width: 83.33% !important;
+    }
+    .col-xs-11{
+        width: 91.66% !important;
+    }
+    .col-xs-12{
+        width: 100% !important;
+    }
+    .popover{
+        margin-left: 0px;
+        margin-right: 15px;
+        left: -245px !important;
+        max-width: 300px !important;
+    }
+    .popover .arrow {
+        right: 0.3em !important;
+    }
+}
+
+@media screen and (max-width: 369px) {
+    .header-text {
+        line-height: 1;
+    }
+}
+
+@media screen and (max-width: 1138px) and (min-width: 941px) {
+    .modal-dialog.modal-dialog-centered {
+        max-width: 60%;
+    }
+}
+@media screen and (max-width: 940px) and (min-width: 807px) {
+    .modal-dialog.modal-dialog-centered {
+        max-width: 70%;
+    }
+}
+@media screen and (max-width: 806px) and (min-width: 768px) {
+    .modal-dialog.modal-dialog-centered {
+        max-width: 80%;
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 627px) {
+    .modal-dialog.modal-dialog-centered {
+        max-width: 90%;
+    }
+}
+@media screen and (max-width: 626px) and (min-width: 594px) {
+    .modal-dialog.modal-dialog-centered {
+        max-width: 95%;
+    }
+}
+@media screen and (max-width: 593px) {
+    .modal-dialog.modal-dialog-centered {
+        max-width: 100%;
+    }
+    .extraDivButton {
+        display: none;
+    }
+    .paddingMobile {
+        padding: 0 !important;
+    }
+    .modal-body {
+        height: 90vw;
+    }
+    .modal-title {
+        font-size: 29px !important;
+    }
+}
+@media screen and (max-width: 806px) and (min-width: 768px) {
+    .modal-dialog.modal-dialog-centered {
+        max-width: 80%;
+    }
+}

@@ -1,0 +1,108 @@
+<div class="section">
+    <com-header [header_text]="header_text" id='header' (setLink)='backButtonRedirection()' (logoLink)='logoClick()'></com-header>
+  <div class="row col-sm-12 col-md-12 col-lg-12 contentDesktop">
+      <div class="col-sm-6 col-md-4 col-lg-4 main-padding">
+          <div class="main-title">Your payment is being processed and your bundle should be active soon. </div>
+          <div class='orderNum'>Here’s your order number: {{order_no}}</div>
+          <div class="d-none d-md-block">
+            <img class="image" src="{{ASSETS_PATH}}/images/feedback-page.png" srcset="{{ASSETS_PATH}}/images/feedback-page@2x.png 2x,
+          {{ASSETS_PATH}}/images/feedback-page@3x.png 3x">
+          </div>
+          
+      </div>
+      <div class="col-sm-6 col-md-5 col-lg-5 offset-2 main-padding">
+          <div class='main-title'>Do you have a few seconds?
+              <br> We'd appreciate your feedback – please rate this experience, and tell us what you thought below. 
+          </div>
+          <!-- <form #form="ngForm"> -->
+              <form class='form' [formGroup]='feedbackForm' (ngSubmit)="submitReview(feedbackForm)">
+              <!-- <bar-rating name="rating" [(ngModel)]="formRating" [max]="4" [theme]="'stars'" required></bar-rating> -->
+              <bar-rating name="rating" formControlName="formRating" [max]="5" [theme]="'stars'" required></bar-rating>
+              <div class="orderNum">
+                  Please write a review
+              </div>
+              <!-- {{feedbackContent}} is of {{feedbackLen}} length. -->
+              <!-- <br> -->
+              <div>
+              <div>
+              <textarea formControlName='feedback' [(ngModel)]='feedbackContent' class='feedback' (keyup)="onKey()" placeholder='Type here…' rows="5" maxlength="160"></textarea>                
+              <div class="feedbackLen">{{feedbackLen}}/160</div>
+              </div>                
+              </div>
+              <!-- <br> -->
+              <div class='submitBtn'>
+              <com-button label='Submit review' type='primary-pad' [disabled]="!feedbackForm.valid"></com-button>
+          </div>
+          </form>
+      </div>
+  </div>
+  <div class="row col-sm-12 col-md-12 col-lg-12 contentMobile">
+      <div class="col-sm-6 col-md-12 col-lg-4 main-padding">
+          <div class="main-title">Your payment is being processed and your bundle should be active soon. </div>
+          <div class='orderNum'>Here’s your order number: {{ order_no }}</div>
+          <img class="header-logo" src="{{ASSETS_PATH}}/images/feedback-page.png" srcset="{{ASSETS_PATH}}/images/feedback-page@2x.png 2x,
+          {{ASSETS_PATH}}/images/feedback-page@3x.png 3x">
+      </div>
+      <div class="col-sm-6 col-md-12 col-lg-5 main-padding">
+          <div>Do you have a few seconds?
+              <br> We'd appreciate your feedback – please rate this experience, and tell us what you thought below. 
+          </div>
+          <!-- <form #form="ngForm"> -->
+              <form [formGroup]='feedbackForm' (ngSubmit)="submitReview(feedbackForm)">
+              <!-- <bar-rating name="rating" [(ngModel)]="formRating" [max]="4" [theme]="'stars'" required></bar-rating> -->
+              <bar-rating name="formRating" formControlName="formRating" [max]="5"  [theme]="'stars'" required></bar-rating>
+              <div class="orderNum">
+                  Please write a review
+              </div>
+              <!-- {{feedbackContent}} is of {{feedbackLen}} length. -->
+              <!-- <br> -->
+              <div>
+              <div>
+              <textarea formControlName='feedback' [(ngModel)]='feedbackContent' class='feedback' (keyup)="onKey()" placeholder='Type here…' 
+              rows="5" maxlength="160"></textarea>                
+              <div class="feedbackLen">{{feedbackLen}}/160</div>
+              </div>                
+              </div>
+              <!-- <br> -->
+              <div class='submitBtn'>
+              <com-button label='Submit review' type='primary-pad' [disabled]="!feedbackForm.valid"></com-button>
+          </div>
+          </form>
+      </div>
+  </div>
+  <div class="row col-sm-12 col-md-12 col-lg-12" class='footer'>
+      <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="title"> 
+              My questions answered
+          </div>
+          <mat-accordion>
+              <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                      <mat-panel-title>
+                          How long after I’ve paid will my account be recharge? 
+                      </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div>
+                      Your bundle should go through within 15 minutes of your purchase. If it doesn't, please contact MTN Customer Care on 083 123 3032.
+                  </div>
+
+              </mat-expansion-panel>
+          </mat-accordion>
+          <hr>
+          <mat-accordion>
+              <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                      <mat-panel-title >
+                          Can I cancel airtime, data or SMS bundles I’ve already bought? 
+                      </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div >
+                      Unfortunately you can't cancel a bundle or get a refund once you've paid for it.
+                  </div>
+
+              </mat-expansion-panel>
+          </mat-accordion>
+          <hr>
+      </div>
+  </div>
+</div>

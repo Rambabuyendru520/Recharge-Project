@@ -1,0 +1,134 @@
+@import './config/config';
+
+.size{
+    font-size: 30px;
+    font-weight: 400;
+    vertical-align: middle;
+}
+.size-unit{
+    word-wrap: break-word;
+}
+.unit{
+    font-size: 24px;
+    font-weight: 400;
+    vertical-align: sub;
+}
+.y-desc{
+    font-size: $card-font-size-x-small;
+    font-weight: $font-thin;
+}
+.rate{
+    font-size: 30px;
+    font-weight: 400;
+}
+.special-desc{
+    font-size: $card-font-size-x-small;
+    font-weight: $font-bold;
+    color:$primary;
+}
+.w-desc{
+    font-size: $card-font-size-x-small;
+    font-weight: $font-thin;
+}
+.yellow{
+    background-color: $primary;
+}
+.whatsapp{
+    background-color: $whatsapp-color;
+}
+.twitter{
+    background-color: $twitter-color;
+}
+.facebook{
+    background-color: $facebook-color;
+}
+.youtube{
+    background-color: $youtube-color;
+}
+.desktop{
+    display: block;
+}
+
+.mobile{
+    display: none;
+}
+@media screen and (max-width: $resS){
+    .size{
+        font-size: 24px;
+        font-weight: bolder;
+    }
+    .unit{
+        font-size: 20px;
+        font-weight: bolder;
+        vertical-align: text-bottom;
+    }
+    .y-desc{
+        font-size: $card-font-size-xx-small;
+    }
+    .rate{
+        font-size: $tile-font-size-regular;
+        font-weight: 400;
+        padding-top: 0px;
+    }
+    .w-desc{
+        font-size: $card-font-size-xx-small;
+        font-weight: $font-thin;
+        padding-left: 0px;
+        padding-top: 5px;
+    }
+    .bundle-main{        
+        // padding: 13px 0px 19px 13px;
+        padding: 18px 0px 16px 13px;
+    }
+    .price-main{
+        // padding: 13px 0px 0px 15px;
+        padding: 10px 0px 0px 12px;
+    }
+    .special-icon{
+        height: 20px;
+        margin-right: 0px; 
+    }
+    .special-desc{
+        font-size: $card-font-size-xx-small;
+        padding-left: 0px;
+        padding-right: 4px;
+    }
+    .desktop{
+        display: none;
+    }
+    
+    .mobile{
+        display: inline;
+    }    
+    
+    .w-desc-padding{
+        padding-top : 0px;
+    }
+}
+
+@media screen and (max-width: $resMin){
+    .size{
+        font-size: $title-font-size-medium; //21px
+    }
+    .unit{
+        font-size: $title-font-size-small; 
+        // vertical-align: text-bottom;       
+    }
+
+    .y-desc{
+        font-size: 9px;
+    }
+    .rate{
+        font-size: $title-font-size-regular; 
+    }
+    .w-desc{
+        font-size: $card-font-size-xx-small;
+    }
+    
+    .special-desc{
+        font-size: 9px;     
+    }
+    .special-icon{
+        height: 18px;
+    }
+}

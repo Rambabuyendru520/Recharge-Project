@@ -1,0 +1,16 @@
+@import './config/config';
+
+.intro-text-1{
+    font-size: $card-font-size-large;
+    font-weight: bolder;
+}
+.intro-text-2{
+    font-size: $card-font-size-small;
+    font-weight: $font-medium;
+}
+
+@media screen and (max-width:$resS){
+    .p-xs-0{
+        padding: 0 !important;
+    }
+}

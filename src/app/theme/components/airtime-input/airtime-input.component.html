@@ -1,0 +1,26 @@
+<div class="container nopadding" >
+    <div class="row nopadding input-wrapper1" [ngClass]='wrapper_class'>
+        <div class="col-3 nopadding r-text-bg">
+            <div id="r-text-div">
+                <span class='r-text'>R</span>
+            </div>
+        </div>
+        <div class="col-8 col-md-7 col-lg-6 nopadding">
+            <input [type]="type" (blur)='onBlur()' (focus)='onFocus()'  class="input-box-field1" pattern="\d*"
+            [ngClass]="[errormsg !== '' ? 'input-wrapper-error' : '']" id='airtime-input-field'
+            [(value)]="_value" (keyup)="renderChange($event.target.value)"
+            [placeholder]="placeholder" autocomplete="off" [min]="min_input" [max]="max_input">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class='comp-margin'>
+                <span *ngIf="errormsg !== ''" class="error-msg">{{errormsg}}</span>
+            </div> 
+        </div>
+    </div>
+</div>
+      
+      
+      
+      

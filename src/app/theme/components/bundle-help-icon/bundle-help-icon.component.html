@@ -1,0 +1,71 @@
+<div class='main nopadding'>
+
+    <mat-card class="">
+
+      <div class="nopadding">
+
+        <div class="row align-items-center justify-content-center main-row">
+
+          <div class="col-4 col-md-auto col-lg-auto nopadding">
+
+            <div class="icon pull-right pr-2">
+
+                <img [src]='icon_path' class='icon'/> 
+
+            </div>
+
+          </div>
+
+          <div class="col-4 col-md-auto col-lg-auto nopadding">
+
+            <div class="pull-left">
+
+                <span id="name">{{name}}</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="hline">
+
+          <hr>
+
+        </div>
+
+        <div class="row desc justify-content-center">
+
+          <div class="col-12">
+
+              <span id="soon-text">
+
+              {{desc}}</span>
+
+          </div>
+
+        </div>
+
+        <div class="row align-items-center justify-content-center">
+
+          <div class="col-12 pl-4 pb-2">
+
+        <com-button *ngIf="disabled == false" [label]='buttonname' (click)="navigateHelp(icon)" type='primary'
+
+              [disabled]="disabled"></com-button>
+
+      
+
+              <com-button *ngIf="disabled == true" [label]='buttonname' type='primary'
+
+              [disabled]="disabled"></com-button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </mat-card>
+
+</div>

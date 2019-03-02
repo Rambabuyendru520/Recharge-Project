@@ -1,0 +1,40 @@
+<div class="container-fluid data-main">
+    <div *ngIf="mobile === false" class="row pt-xs-0">
+        <span>What kind of calling bundle are you looking for?</span>
+    </div>
+    <div class="row tool-main justify-content-start">
+            <div class="col-12 col-lg-6 nopadding">
+                <div class="row nopadding">
+                    <span class="col-10 col-lg-auto choose-bundle nopadding">How long would you like your bundle to last?&nbsp;&nbsp;</span>
+                    <div class='col-2 col-lg-auto' matTooltip="<h1>Info about the action</h1>">
+                        <img [src]="tooltip_path" alt="ToolTip" class="tool-tip"/>
+                    </div>
+                </div>
+            </div>
+            <span class="col-12 col-lg-6 pull-right p-lg-0 p-xs-0">This is what's available:</span>
+    </div>
+    <div class="row pt-4 justify-content-between">
+        <div class="col-12 col-lg-5 nopadding">
+            <div class="container tab-view">
+                <div class="row px-3">
+                   <div class="col normal-tab" (click)='changeTab(0)' [ngClass]="[tab_state[0] ? 'active-tab' : '']">
+                       <span>1 hour</span>
+                   </div>
+                   <div class="col normal-tab" (click)='changeTab(1)' [ngClass]="[tab_state[1] ? 'active-tab' : '']">
+                       <span>1 day</span>
+                   </div>
+                   <div class="col normal-tab" (click)='changeTab(2)' [ngClass]="[tab_state[2] ? 'active-tab' : '']">
+                       <span>1 week</span>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 pull-right p-lg-0">
+            <div class="bundle-list">
+                <div *ngFor="let bn of bundleArray.results;let idx = index" class='each-card'>
+                    <com-bundle-card (click)="select_bundle(idx)" [color]='bn.color' [size]='bn.value' [unit]='bn.name' [rate]='bn.cost' [y_desc]='' [special_check]='bn.special' [check]='bn.check' [w_desc]='bn.desc'></com-bundle-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

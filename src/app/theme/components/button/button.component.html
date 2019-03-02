@@ -1,0 +1,5 @@
+<button mat-button [disabled]='disabled' class='primary' [ngClass]='type' (click)='onClickFunc()' >
+  <div id='btn-container'>
+    <div id='label' style='font-weight: bold;' [ngClass]="[disabled? 'label-disabled' : 'label-enabled']">{{label}}</div>
+  </div>
+</button>

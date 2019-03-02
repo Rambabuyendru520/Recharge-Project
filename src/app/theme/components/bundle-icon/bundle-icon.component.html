@@ -1,0 +1,20 @@
+<div class="main">
+  <div class="container nopadding">
+    <div class="row justify-content-center px-lg-3">
+      <div class="col-auto p-0 m-0">
+          <img [src]='icon_path' class="icon" [hidden]="icon_selected"/>
+          <img [src]='icon_path_selected' class="icon" [hidden]="!icon_selected"/>
+      </div>
+    </div>
+    <div class="row justify-content-center py-2 px-lg-3">
+      <div class="col-auto">
+        <span [ngClass]="[icon_selected ? 'bundle-icon-name-s' : 'bundle-icon-name-ns']">{{name}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 nopadding">
+        <div class="tab-marker clearfix w-100" *ngIf="icon_selected"></div>
+      </div>
+    </div>
+  </div>
+</div>

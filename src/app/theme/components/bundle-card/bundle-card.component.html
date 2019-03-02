@@ -1,0 +1,64 @@
+<div class="main">
+    <mat-card>
+        <div class="container-fluid">
+            <div class="row card-main">
+                <!-- <div class="col-5 col-lg-4 bundle-main {{color}}" [ngStyle]="{'padding': y_desc ? '13px 0px 13px 30px' : '19px 0px 19px 13px' }" id="bundle-main"> -->
+                <div class="col-5 col-lg-4 bundle-main {{color}}" id="bundle-main">
+                    <div class="row nopadding">
+                        <div class="col nopadding">
+                            <div class="row nopadding">
+                                <div class="col nopadding">
+                                    <div class="container nopadding">
+                                        <div class="row nopadding justify-content-between">
+                                            <div class="col-auto col-md-auto nopadding size-unit" *ngIf="!special_check">
+                                                <div>
+                                                    <span class="size d-inline-block">{{size}}</span>
+                                                    <span class="unit d-inline-block">{{unit}}</span> 
+                                                </div>
+                                            </div>
+                                            <div class="col-8 nopadding size-unit" *ngIf="special_check">
+                                                <div>
+                                                    <span class="size d-inline-block">{{size}}</span>
+                                                    <span class="unit d-inline-block">{{unit}}</span> 
+                                                </div>
+                                            </div>
+                                            <div class="col-auto nopadding" *ngIf="special_check">
+                                                <img [src]='special_icon' alt='UnSelected' class='special-icon'/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row nopadding">
+                                <div class="col nopadding">
+                                    <span class="y-desc">{{y_desc}}</span>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6 price-main" id="price-main">
+                <div class="row col-12 nopadding">
+                        <div class="rate">{{currency}}{{ rate }}</div>
+                        <div class='w-100 d-block d-md-none'></div>
+                        <div>
+                            <div *ngIf="special_check" class="special-desc desktop">Special!</div>
+                            <div [ngClass]="{true: 'special-padding', false: 'w-desc-padding'}[special_check]">
+                                    <span *ngIf="special_check" class="special-desc mobile">Special!</span>
+                                    <span class="w-desc">{{ w_desc }}</span>
+                            </div>
+                        </div>
+                </div>
+                </div>
+                <div class="col-1 col-lg-2 select-icon nopadding">
+                    <div class="pull-right">
+                        <img [src]='select_icon' alt='Selected' class='select-icon' *ngIf="check"/>
+                        <img [src]='unselect_icon' alt='UnSelected' class='select-icon' *ngIf="!check"/>        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>
+
+<!-- [ngStyle]='{"padding":{true : "13px 0px 13px 30px" , false : "19px 0px 19px 30px"} [y_desc!=""]}' -->

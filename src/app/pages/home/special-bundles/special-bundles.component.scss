@@ -1,0 +1,28 @@
+.tool-tip{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    vertical-align: top;
+}
+.tool-main{
+    line-height: 30px;
+}
+.normal-tab{
+    cursor: pointer;
+    padding:2px 3px 2px 3px !important;
+    padding: 0;
+}
+.tab-view{
+    text-align: center;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.08);
+    padding: 5px 10px 5px 10px;
+    border-radius: 25px;
+}
+.active-tab{
+    border-radius: 25px;
+}
+.each-card{
+    margin-bottom: 10px;
+}

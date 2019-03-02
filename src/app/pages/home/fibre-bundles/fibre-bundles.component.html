@@ -1,0 +1,21 @@
+<div class="container-fluid data-main p-xs-0">
+    <div *ngIf="mobile === false" class="row">
+        <div class="col nopadding" *ngIf="fibrebundleArray[0]">
+            <span class='which-fibre'>Which fibre bundle would you like?</span>
+        </div>
+    </div>
+    <div class="row pt-2">
+        <div class="col-12 col-lg-6 p-lg-0 pt-xs-0">
+            <div *ngIf="fibrebundleArray[0]">
+                <!-- <span class='whats-avail'>This is what's available:</span> -->
+                <div class="bundle-list pt-4">
+                    <div *ngFor="let bn of fibrebundleArray;let idx = index" class='each-card'>
+                        <com-bundle-card (click)="select_bundle(idx)" [color]='bn.color' [size]='bn.value' [unit]='bn.name'
+                            [rate]='bn.cost' [y_desc]='bn.subdesc' [special_check]='' bundle_type='FTTH' [check]='bn.check' [w_desc]='bn.desc'></com-bundle-card>
+                    </div>
+                </div>
+            </div>
+            <h4 *ngIf="!(fibrebundleArray[0])">No bundles available!</h4>
+        </div>
+    </div>
+</div>

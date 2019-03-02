@@ -1,0 +1,18 @@
+.main{
+  display: table;
+  height: 100vh;
+  text-align: center;
+  width: 100%;
+  text-align: center;
+  color: #888;
+}
+.content{
+  display: table-cell;
+  vertical-align: middle;
+  margin: 2em auto;
+}
+h1 {
+  color: #555;
+  font-size: 2em;
+  font-weight: 400;
+}

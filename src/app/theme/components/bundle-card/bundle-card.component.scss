@@ -1,0 +1,66 @@
+mat-card{
+    width: 100%;
+    padding: 0 !important;
+    border-radius: 5px;
+    box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.08);
+}
+.bundle-main{
+    line-height: 1;
+    padding: 19px 0px 19px 13px;
+}
+.price-main{
+    padding: 15px 0px 15px 25px;
+    line-height: 1;
+}
+.unit{
+    padding-top: 4px;
+}
+.size{
+    word-wrap: break-word;
+}
+
+.w-desc{
+    padding-left: 5px;
+    letter-spacing: -0.4px;
+    padding-top: 17px;
+}
+.size-unit{
+    word-wrap: break-word;
+}
+.y-desc{
+    font-size: 12px;
+}
+.rate{
+    padding-top: 5px;
+}
+.special{
+    display: inline-block;
+}
+.special-desc{
+    padding-left: 5px;
+    letter-spacing: -0.4px;
+    padding-top: 3px;
+    font-weight: 400;
+}
+.y-desc{
+    letter-spacing: -0.4px;
+}
+.main{
+    cursor: pointer;
+}
+.special-icon{
+    // width: 32.3px; 
+    // height: 15px;
+    width: 32px;
+    height: 26px;
+    float:right;
+    padding-right: 5px; 
+    margin-right: 10px; 
+}
+.special-padding{
+    padding-top : 0px;
+}
+
+.w-desc-padding{
+    padding-top : 14px;
+}

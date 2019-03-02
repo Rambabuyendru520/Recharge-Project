@@ -1,0 +1,35 @@
+<footer>
+        <div class="sample footer-main">
+            <div class="container-fluid">
+                <div class="row pt-4 pl-4">
+                    <div class="col">
+                        <span class="recharge-text d-none d-md-block">Which number do you want to recharge?</span>
+                        <span class="recharge-text d-block d-md-none">Enter the MTN number you want to recharge:</span>
+                    </div>
+                </div>
+                <div class="row pb-5 pl-4">
+                    <div class="col-12 col-lg-4 pt-2">
+                            <com-msisdn-input></com-msisdn-input>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <com-button label='Buy now' (click)="validateBundle()" type='primary'
+                        [disabled]="!input_valid || !bundleSelected || !which_bundle"></com-button>
+                    </div>
+                    <div class="col-12 col-lg-3 pt-2">
+                        <div class="terms-text">
+                            <span>
+                                    MTN cannot be held responsible for numbers entered incorrectly. 
+                                    &nbsp;Please double check the cell number you’ve chosen before recharging.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="gap my-5">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,85 @@
+@import './config/config';
+
+.fa{
+    color: $primary;
+}
+#name{
+    font-size: $card-font-size-medium;
+    font-weight: $font-medium;
+}
+#soon-text{
+    // letter-spacing: -0.5px;
+}
+.desc{
+    // height: calc(100%-20px) !important;
+     height:16em;
+     padding-left: 15px;
+    font-size: $card-font-size-small;
+    line-height: 20px;
+    text-align: left;
+    font-weight: 16px;
+    // padding-bottom: 99999px; 
+    // margin-bottom: -99999px;
+}
+#soon-text.bundle-disabled{
+    color: $inactive-grey !important;
+}
+.text-dis{
+    color: $primary-black !important;
+}
+.card-dis{
+    background-color: $secondary-grey !important;
+    cursor:initial;
+}
+.icon-dis{
+    color: $inactive-grey !important;
+}
+.text-click{
+    color: white !important;
+}
+.card-click{
+    background-color: $primary;
+}
+.yellow{
+    background-color: $primary;
+}
+.whatsapp{
+    background-color: $whatsapp-color;
+}
+.twitter{
+    background-color: $twitter-color;
+}
+.facebook{
+    background-color: $facebook-color;
+}
+.youtube{
+    background-color: $youtube-color;
+}
+@media screen and (max-width: $resS){
+    #name{
+        font-size: $card-font-size-x-medium;
+    }
+    mat-card{
+        padding: auto !important;
+        margin: auto !important;
+    }
+    .icon{
+        max-width: 80%;
+        max-height: 80%;
+    }
+    .desc{
+        font-size: 12px;
+        padding-bottom: 0 !important; 
+        margin-bottom: 0 !important;
+        height: auto;
+    }
+    .justify-content-center {
+        -ms-flex-pack: left !important;
+        justify-content: left !important;
+    }
+}
+@media screen and (min-width: 1024px){
+.desc{
+	height:19em !important;
+}
+}

@@ -1,0 +1,100 @@
+$btnL: 250px;
+$btnXL: 350px;
+$btnXXL: 400px;
+
+$resMax: 1370px;
+$resXXL: 1280px;
+$resXL: 1170px;
+$resL: 991px;
+$resM: 768px;
+$resS: 660px;
+$resXS: 500px;
+$resXXS: 435px;
+$resMin: 320px;
+
+$top-height: 66px;
+$sidebar-width: 180px;
+
+$small-card-height: 114px;
+$xsmall-card-height: 187px;
+$medium-card-height: 400px;
+$extra-medium-card-height: 550px;
+$large-card-height: 974px;
+
+$default-animation-duration: 0.2s;
+$default-animation-style: ease-out;
+$assets-root: '/app/appassets';
+$images-root: '/images/';
+$fonts-root: '/fonts/';
+
+$font-thin: 200;
+$font-regular: 400;
+$font-medium: 600;
+$font-bold: 800;
+
+$whatsapp-color: #0FAF4B;
+$youtube-color: #DA2724;
+$facebook-color: #3C5A99;
+$twitter-color: #2DAAE1;
+$google-color: #dd4b39;
+$linkedin-color: #0177B5;
+$github-color: #6b6b6b;
+$stackoverflow-color: #2F96E8;
+$dribble-color: #F26798;
+$behace-color: #0093FA;
+$white-color: #ffffff;
+
+$input-hint-font: 14px;
+$nav-font-size-small: 12px;
+$nav-font-size-medium: 14px;
+$nav-font-size-large: 16px;
+
+$title-font-size-small: 16px;
+$title-font-size-regular: 18px;
+$title-font-size-medium: 20px;
+$title-font-size-large: 24px;
+
+$card-font-size-large: 20px;
+$card-font-size-x-medium: 18px;
+$card-font-size-medium: 16px;
+$card-font-size-small: 14px;
+$card-font-size-x-small: 12px;
+$card-font-size-xx-small: 10px;
+
+$layout-font-size-large: 26px;
+$layout-font-size-medium: 22px;
+$layout-font-size-small: 20px;
+
+$toolbar-font-size-large: 26px;
+$toolbar-font-size-medium: 20px;
+$toolbar-font-size-small: 18px;
+
+$info-font-size-small: 12px;
+$info-font-size-medium: 14px;
+$info-font-size-large: 16px;
+$info-font-size-x-small: 10px;
+
+$tile-font-size-xx-large: 36px;
+$tile-font-size-x-large: 32px;
+$tile-font-size-large: 30px;
+$tile-font-size-x-medium: 28px;
+$tile-font-size-medium: 26px;
+$tile-font-size-regular: 22px;
+$tile-font-size-small: 18px;
+$tile-font-size-x-small: 16px;
+$tile-font-size-xx-small: 14px;
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * 5),
+    2: ($spacer * 6),
+    3: $spacer,
+    4: ($spacer * 15),
+    5: ($spacer * 30)
+  ),
+  $spacers
+);

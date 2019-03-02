@@ -1,0 +1,23 @@
+ <div class="container nopadding">
+    
+  <div class="row nopadding">
+    <div class="col nopadding">
+        
+            <input [type]="type" (blur)='onBlur()' (focus)='onFocus()'  
+            class="input-box-field" id="email-input-field"
+            [(value)]="_value" (keyup)="renderChange($event.target.value)" 
+            [placeholder]="placeholder" autocomplete="off">
+        
+    </div>
+  </div>
+  <div class="row nopadding">
+        <div class="col-12 nopadding">
+            <div class='comp-margin pl-1'>
+                <span *ngIf="errormsg !== ''" class="error-msg">{{errormsg}}</span>
+            </div> 
+        </div>
+      </div>
+ </div> 
+  
+  
+  

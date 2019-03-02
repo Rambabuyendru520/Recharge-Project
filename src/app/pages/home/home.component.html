@@ -1,0 +1,73 @@
+<div id='page'>
+  <div class="header-div">
+      <com-header [header_text]="header_text" (logoRedirection)='mtnLogoRedirect()' (setLink)='backEmitter()' id='header'></com-header>
+  </div>
+  <div [ngStyle]="{'margin-top': [ true ] ? '0px' : '0px'}">
+    <div class="main">
+      <div *ngIf="help_icon === false" class="container-fluid nopadding">
+        <div class="row justify-content-start pt-4 mb-2 mb-lg-4 pr-3 mx-0 bundle-icon-row" [hidden]='hide_icons && mobile_screen'>
+          <div class="col-auto col-md-1 mr-md-4" *ngFor="let bn of bundleArray.results;let idx = index">
+            <div class="bundle-icon">
+                 <com-bundle-icon [icon]=bn.icon [name]='bn.name' [disabled]='bn.disable' [(icon_selected)]=bn.click (click)='toggleIcon(idx,bn.disable)'></com-bundle-icon>
+            </div>
+          </div>
+        </div>
+        <div class="d-none" id='hiddendiv'></div>
+        <div class="row pt-3 page-content" [hidden]="!(lastClick === 0)"  #datamob>
+          <div class="col-12 col-lg-10 pull-right">
+            <com-data-bundles *ngIf="showBundles"  [mobile]="hide_icons && mobile_screen" [bundleList]="bundlelist_details"></com-data-bundles>
+          </div>
+        </div>
+        <div class="row pt-3 page-content" [hidden]="!(lastClick === 1)" #airtimemob >
+          <div class="col-12 col-lg-10 pull-right">
+            <com-airtime-bundles [mobile]="hide_icons && mobile_screen" [value]='airtime_value'></com-airtime-bundles>
+          </div>
+        </div>
+        <div class="row pt-3 page-content" [hidden]="!(lastClick === 2)" #smsmob >
+          <div class="col-12 col-lg-10 pull-right">
+            <com-sms-bundles *ngIf="showBundles" [mobile]="hide_icons && mobile_screen" [bundleList]="bundlelist_details"></com-sms-bundles>
+          </div>
+        </div>
+        <div class="row pt-3 page-content" [hidden]="!(lastClick === 5)" #voicemob>
+          <div class="col-12 col-lg-10 pull-right">
+            <com-voice-bundles [mobile]="hide_icons && mobile_screen"></com-voice-bundles>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+<div *ngIf="footerDiv === true" class="footer-div mt-4" id='footerscroll'>
+    <com-footer (msisdn_val)='footerEmitter($event)' [bundleSelected]='isBundleSelected'></com-footer>
+</div>
+
+<div class="modal fade" id="bundleModal" tabindex="-1" role="dialog" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-10">
+                <h3>Oops!</h3>
+            </div>
+            <div class="col-2">
+              <div class="float-right" (click)='hideModal()'>
+                  <i class="fa fa-1x fa-times"></i>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-10">
+              <span class='modal-text'>{{bundlePopup_text}}</span>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12 col-md-8">
+              <com-button label='Choose a different bundle' type='primary' size='half' (click)='hideModal()'
+                [disabled]="false"></com-button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,182 @@
+@import './config/config';
+
+.mat-button-focus-overlay{
+  background-color: $disabled !important;
+}
+.mat-button[disabled]{
+  background-color: $inactive-grey !important;
+  border: 0px solid $inactive-grey !important;
+  & i{
+    color: $white;
+  }
+}
+.mat-button[disabled] .mat-button-focus-overlay, .mat-icon-button[disabled] .mat-button-focus-overlay{
+  background-color: transparent !important;
+  color: $disabled !important;
+}
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+button {
+  width: 100%;
+  text-align: left;
+  border-radius: 100px;
+  margin: 10px 0px !important;
+}
+#btn-container{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#icon{
+  padding-top:9px;
+  font-size: initial !important;
+}
+button:focus {
+  outline:0 !important;
+}
+.filled {
+  background-color: $primary;
+  & i{
+    color:$white;
+  }
+}
+.borderline {
+  background-color: transparent;
+  border: 1px solid $border;
+  & i{
+    color:$default-text !important;
+  }
+}
+.borderline:hover {
+  border: 1px solid $border-light;
+}
+.mat-button-focus-overlay, .mat-button-ripple{
+  border-radius: 100px;
+}
+.fab-btn-lable{
+  padding: 5px 2px;
+}
+.mat-fab{
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.mat-fab .mat-button-wrapper {
+  padding: 10px 0px !important;
+  display: inline-block;
+  line-height: 24px;
+}
+
+.mat-fab .fa-lg {
+  font-size: 14px;
+  // line-height: -9.25em;
+  vertical-align: 35%;
+}
+
+.quater-btn{
+  width: 25%;
+}
+.half-btn{
+  width: 50%;
+}
+#label{
+  font-weight: bold;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  padding-right : 1px;
+  text-align: center;
+  font-size: $info-font-size-medium;
+  font-weight: $font-medium !important;
+  // color: $default-text;
+}
+.label-disabled{
+  color: #7f7f7f;
+}
+.label-enabled{
+  color: #000000;
+}
+.primary{
+  background-color: $primary;
+  padding: 1%;
+}
+.inactive{
+  background-color: $inactive-grey;
+}
+.secondary{
+  background-color: $secondary-grey;
+  border: 1px solid;
+}
+.primary-white{
+    background-color: $white;
+}  
+.primary-white-pad{
+    background-color: $white;
+    padding: 1%;
+    font-size: 16px;
+}  
+.large-font{
+    font-size: 16px !important;
+    text-align: center;
+}
+.primary-pad{
+    background-color: $primary;
+    padding: 1.2%;
+}
+.large-font{
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-align: center;
+}
+@media screen and (max-width: $resS){
+  .quater-btn{
+    width: 50%;
+  }
+  .half-btn{
+    width: 100%;
+  }
+  #label{
+    font-size: 12px;  
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (-ms-ime-align: auto) {
+  /* IE10+ CSS styles go here */
+  #btn-container{
+      display: -ms-grid;
+      -ms-grid-columns: 1fr 20px;
+  }
+  #label{
+    -ms-grid-column: 1;
+  }
+  #icon{
+    -ms-grid-column: 2;
+  }
+}
+
+@supports (-ms-accelerator:true) {
+  /* Edge 12-15 CSS styles go here */
+  #btn-container{
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 20px;
+}
+#label{
+  -ms-grid-column: 1;
+}
+#icon{
+  -ms-grid-column: 2;
+}
+}
+@supports (-ms-ime-align: auto) {
+  /* Edge 16+ CSS styles go here */
+  #btn-container{
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 20px;
+}
+#label{
+  -ms-grid-column: 1;
+}
+#icon{
+  -ms-grid-column: 2;
+}
+
+}

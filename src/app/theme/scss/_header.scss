@@ -1,0 +1,42 @@
+@import './config/config';
+
+header{
+  background-color: $primary;
+}
+.header-text{
+  font-size: $tile-font-size-large;
+}
+.header-back-text{
+  font-size: $title-font-size-medium;
+  color: white;
+  padding-left: 10px;
+  font-weight: 600;
+}
+.left-arrow{
+  color: white;
+}
+@media screen and (max-width: $resS) {
+  .header-text{
+    font-size: 31px;
+    line-height: 30px;
+  }
+  header{
+    width: 100%;
+    padding: 10px 20px !important;
+  }
+  .drop-links{
+    display: flex !important;
+  }
+  .nav-links{
+    display: none !important;
+  }
+}
+@media screen and (max-width: $resXS) {
+  .header-text{
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .header-padding{
+    padding-bottom: 5px;
+  }
+}

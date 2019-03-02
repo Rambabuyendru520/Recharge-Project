@@ -1,0 +1,277 @@
+
+// html{
+//     height: 100% !important;
+// }
+// body{
+//     height: 100% !important;
+// }
+// .Fallout-General{
+//     // width: 1440px;
+//     // height: 800px;
+    
+//     height: 100%;
+//     // width: 100%;
+//     // height: 100% !important;
+//     // background-color: var(--MTN-yellow-sunshine);
+//   }
+
+.Fallout-General{
+    padding-top: 5%;
+}
+  .Error1{
+     width: 100% ;
+    // height: 711px;
+    object-fit: contain;
+    float: right;
+  }
+
+.main-padding{
+    padding-left: 5%;
+    // padding-top: 5%;
+}
+
+.row{
+    padding-bottom: 15px;
+}
+
+.heading{
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1 !important;
+}
+
+.intro-text-2{
+    font-size: 24px;
+    line-height: 1 !important;
+    font-weight: 600;
+}
+
+.padding-right{
+    padding-right: 0% !important;
+}
+
+.small_screen{
+    display: none;
+}
+.small_screen_1{
+    display: none;
+}
+
+.main{
+    min-height: 100vh;
+    background-color: #ffcc00;
+    height: fit-content;
+}
+
+.header-logo{
+    height: 40px;
+    float: right;
+}
+
+.desktop{
+    display: block;
+}
+
+.mobile{
+    display: none;
+}
+@media screen and (max-width:1024px){
+
+    .main-padding{
+       padding-top: 0%;
+    }   
+
+    .Error1{
+        width: 100% ;
+        // position: absolute;
+        // bottom: 0%;
+    }
+
+    .Fallout-General{
+        padding-top: 10% !important; 
+    }
+}
+
+@media screen and (max-width:800px){
+    .desktop{
+        display: none;
+    }
+    
+    .mobile{
+        display: block;
+    }
+
+    .main-padding{
+        padding: 0% 10% 0% 10%;
+    }
+
+    .Fallout-General{
+        padding-top: 5% !important; 
+    }
+
+    .heading{
+        font-size: 50px;       
+    }
+
+    .intro-text-2{
+        font-size: 25px;       
+        font-weight: 200;        
+    }
+
+    .large_screen{
+        display: none;
+    }
+
+    .bottom_div{
+        // position: absolute;
+        // bottom: 0%;
+        text-align: center;
+    }
+    .Error1{
+        width: 80% ;
+        // position: absolute;
+        // bottom: 0%;
+    }
+    
+    .small_screen{
+        position:absolute;
+        display: block;        
+        bottom:10%;
+        z-index: 500;
+        width: 80%;
+        padding-left: 10%; 
+    }
+    .small_screen_1{
+        position:absolute;
+        display: block;        
+        bottom:25%;
+        z-index: 500;
+        width: 80%;
+        padding-left: 10%; 
+    }
+}
+
+@media screen and (max-width:600px){
+    .mainPage {
+        overflow-y: scroll;
+        height: 100vh;
+    }
+    .col-xs-1{
+        width: 8.33% !important;
+      }
+      .col-xs-2{
+        width: 16.66% !important;
+      }
+      .col-xs-3{
+        width: 25% !important;
+      }
+      .col-xs-4{
+        width: 33.33% !important;
+      }
+      .col-xs-5{
+        width: 41.66% !important;
+      }
+      .col-xs-6{
+        width: 50% !important;
+      }
+      .col-xs-7{
+        width: 58.33% !important;
+      }
+      .col-xs-8{
+        width: 66.66% !important;
+      }
+      .col-xs-9{
+        width: 75% !important;
+      }
+      .col-xs-10{
+        width: 83.33% !important;
+      }
+      .col-xs-11{
+        width: 91.66% !important;
+      }
+      .col-xs-12{
+        width: 100% !important;
+      }
+
+      .col-sm-1{
+        width: 8.33% !important;
+      }
+      .col-sm-2{
+        width: 16.66% !important;
+      }
+      .col-sm-3{
+        width: 25% !important;
+      }
+      .col-sm-4{
+        width: 33.33% !important;
+      }
+      .col-sm-5{
+        width: 41.66% !important;
+      }
+      .col-sm-6{
+        width: 50% !important;
+      }
+      .col-sm-7{
+        width: 58.33% !important;
+      }
+      .col-sm-8{
+        width: 66.66% !important;
+      }
+      .col-sm-9{
+        width: 75% !important;
+      }
+      .col-sm-10{
+        width: 83.33% !important;
+      }
+      .col-sm-11{
+        width: 91.66% !important;
+      }
+      .col-sm-12{
+        width: 100% !important;
+      }
+   
+    .main-padding{
+        padding: 0% 10% 0% 5% !important;
+    }
+
+    .Fallout-General{
+        padding-top: 0% !important; 
+    }
+
+    .heading{
+        font-size: 30px;        
+    }
+
+    .intro-text-2{
+        font-size: 16px;
+    }
+
+    .Error1{
+        width: 100% ;
+        // position: absolute;
+        // bottom: 0%;
+    }
+}
+
+@media screen and (max-width:365px){
+    .main-padding{
+        padding: 0% 10% 0% 5% !important;
+    }
+
+    .heading{
+        font-size: 24px;        
+    }
+
+    .intro-text-2{
+        font-size: 14px;
+    }
+    .Error1{
+        width: 95% ;        
+    }
+    .small_screen{            
+        bottom:6% ;        
+    }
+    .small_screen_1{             
+        bottom:25% ;        
+    }
+}

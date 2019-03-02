@@ -1,0 +1,60 @@
+@import './config/config';
+
+body {
+  @include body-bg();
+}
+// main{
+//   margin-top: 84px;
+//   height: calc(100vh - 84px);
+// }
+// .section-padding{
+//   padding: 40px 60px;
+// }
+
+
+html body {
+   width:100%;
+   margin: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-x: hidden;
+}
+@media screen and (min-width: $resS) and (max-width: $resMax){
+  header{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:$resS){
+  html {
+    // overflow: hidden;
+    margin:auto;
+  }
+  main{
+    margin-top: 76px;
+    height: calc(100vh - 76px);
+  }
+  .section-padding{
+    padding: 10px 20px;
+  }
+}
+
+@media all and (-ms-high-contrast: active) , (-ms-high-contrast: none) {
+  .row{
+    flex-wrap: nowrap !important;
+  }
+}
+@supports (-ms-ime-align: auto) {
+  .row{
+    flex-wrap: nowrap !important;
+  }
+}
+@supports (-ms-accelerator:true) {
+  .row{
+    flex-wrap: nowrap !important;
+  }
+}

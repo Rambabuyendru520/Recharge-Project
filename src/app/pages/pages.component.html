@@ -1,0 +1,20 @@
+<div>
+    <div [hidden]="fallout !== 0">
+        <router-outlet></router-outlet>
+    </div>
+    <div [hidden]="fallout !== 1">
+        <com-fallout-feedback-error></com-fallout-feedback-error>
+    </div>
+    <div [hidden]="fallout !== 2">
+        <com-fallout-general></com-fallout-general>
+    </div>
+    <div [hidden]="fallout !== 3">
+        <com-fallout-non-mtn></com-fallout-non-mtn>
+    </div>
+    <div [hidden]="fallout !== 4">
+        <com-fallout-payment-unsuccessful></com-fallout-payment-unsuccessful>
+    </div>
+    <div [hidden]="fallout !== 5">
+        <com-fallout-purchase-limit></com-fallout-purchase-limit>
+    </div>
+</div>

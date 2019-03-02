@@ -1,0 +1,22 @@
+@import './config/config';
+
+.active-tab{
+    background-color:  $primary;
+}
+.tab-view{
+    font-size: $card-font-size-small;
+    font-weight: 600;
+}
+@media screen and (max-width: $resS){
+    .tab-view{
+        font-size: $card-font-size-x-small;
+        box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.08);
+        padding: 5px 3px 4px 3px;
+    }
+    .p-xs-0{
+        padding: 0 !important;
+    }
+    .pt-2{
+        padding-top: 0 !important;
+    }
+}

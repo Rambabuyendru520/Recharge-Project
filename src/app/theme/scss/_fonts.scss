@@ -1,0 +1,115 @@
+@import './config/config';
+
+@font-face{
+  font-family: 'MTN Sans';
+  src: url('/appassets/fonts/MTNBrighterSans-Light.otf');
+  font-weight: 200;
+}
+
+@font-face{
+  font-family: 'MTN Sans';
+  src: url('/appassets/fonts/MTNBrighterSans-Regular.otf');
+  font-weight: 400;
+}
+
+@font-face{
+  font-family: 'MTN Sans';
+  src: url('/appassets/fonts/MTNBrighterSans-Medium.otf');
+  font-weight: 600;
+}
+
+@font-face{
+  font-family: 'MTN Sans';
+  src: url('/appassets/fonts/MTNBrighterSans-Bold.otf');
+  font-weight: bold;
+}
+
+@font-face{
+  font-family: 'MTN Sans';
+  src: url('/appassets/fonts/MTNBrighterSans-ExtraBold.otf');
+  font-weight: bolder;
+}
+
+/** Font Faces for Internet Explorer**/
+@font-face{
+  font-family: 'MTN Sans IE';
+  src: url('/appassets/fonts/MTNBrighterSans-Light.woff');
+  font-weight: 200;
+}
+
+@font-face{
+  font-family: 'MTN Sans IE';
+  src: url('/appassets/fonts/MTNBrighterSans-Regular.woff');
+  font-weight: 600;
+}
+
+@font-face{
+  font-family: 'MTN Sans IE';
+  src: url('/appassets/fonts/MTNBrighterSans-Medium.woff');
+  font-weight: 400;
+}
+
+@font-face{
+  font-family: 'MTN Sans IE';
+  src: url('/appassets/fonts/MTNBrighterSans-Bold.woff');
+  font-weight: bold;
+}
+
+@font-face{
+  font-family: 'MTN Sans IE';
+  src: url('/appassets/fonts/MTNBrighterSans-ExtraBold.woff');
+  font-weight: bolder;
+}
+/** Font Faces for Internet Explorer**/
+body {
+  font-family: 'MTN Sans', Century Gothic, Arial;
+  color: $default-text;
+  user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+.mat-toolbar, .mat-button, .mat-select, .mat-option, .mat-form-field, .mat-select-trigger
+.mat-select-value, .mat-input-placeholder-wrapper.mat-form-field-placeholder-wrapper, .mat-select-arrow
+.mat-error, .mat-card, .mat-expansion-panel-header,
+.mat-expansion-panel-content {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  font-weight: 300;
+}
+
+.fa{
+  color: $default-text;
+}
+a:hover, a:visited, a:active{
+  color: $default-text;
+}
+.section-title{
+  font-size: $title-font-size-small;
+  font-weight: bold;
+}
+
+.layout-title{
+  font-size: $layout-font-size-large;
+  font-weight: 300;
+}
+
+@media screen and (max-width: $resS){
+  .layout-title{
+    font-size: $layout-font-size-small;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+ 
+  body {
+    font-family: 'MTN Sans IE';
+    color: $default-text;
+  }
+}

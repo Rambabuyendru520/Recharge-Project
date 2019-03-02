@@ -1,0 +1,96 @@
+@import './config/config';
+
+.fa{
+    color: $primary;
+}
+#name{
+    font-size: 18px;
+    font-weight: $font-medium;
+}
+#soon-text{
+    font-size: 12px;
+    line-height: 1.38;
+    text-align: center;
+}
+#soon-text.bundle-disabled{
+    color: $inactive-grey !important;
+}
+.text-dis{
+    color: $primary-black !important;
+}
+.card-dis{
+    background-color: $secondary-grey !important;
+    cursor:initial;
+}
+.icon-dis{
+    color: $inactive-grey !important;
+}
+.text-click{
+    color: white !important;
+}
+.card-click{
+    background-color: $primary;
+}
+.yellow{
+    background-color: $primary;
+}
+.whatsapp{
+    background-color: $whatsapp-color;
+}
+.twitter{
+    background-color: $twitter-color;
+}
+.facebook{
+    background-color: $facebook-color;
+}
+.youtube{
+    background-color: $youtube-color;
+}
+.bundle-icon-name-ns{
+    font-size: 19.6px;
+    line-height: 1.43;
+    letter-spacing: -0.8px;
+    font-weight: 600;
+    opacity: 0.6;
+    color: #666666;
+    font-weight: 600;
+}
+.bundle-icon-name-s{
+    font-size: 19.6px;
+    font-weight: 600;
+    line-height: 1.43;
+    letter-spacing: -0.8px;
+    color: black;
+}
+@media screen and (min-width: 1500px) {
+    .icon{
+      width: 60px;
+      height: 60px;
+    }
+    #name{
+      font-size: 20px !important;
+    }
+  }
+@media screen and (max-width: $resS){
+    #name{
+        font-size: $card-font-size-x-medium;
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+      }
+    mat-card{
+        padding: auto !important;
+        margin: auto !important;
+    }
+    .bundle-icon-name-ns{
+        font-size: 14px;
+        line-height: 1.29;
+        letter-spacing: -0.4px;
+    }
+    .bundle-icon-name-s{
+        font-size: 14px;
+        line-height: 1.29;
+        letter-spacing: -0.4px;
+    }
+}

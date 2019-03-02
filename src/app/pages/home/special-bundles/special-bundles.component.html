@@ -1,0 +1,18 @@
+<div class="container-fluid data-main">
+    <div *ngIf="mobile === false" class="row pt-xs-0">
+        <span>Which exclusive deal would you like?</span>
+    </div>
+    <div class="row pt-2">
+        <div class="col-12 col-lg-6 p-lg-0 p-xs-0">
+            <span>This is what's currently available:</span>
+            <div class="bundle-list pt-4">
+                <div *ngFor="let bn of bundleArray.results;let idx = index" class='each-card'>
+                    <com-bundle-card (click)="select_bundle(idx)" [color]='bn.color' [size]='bn.value' [unit]='bn.name' [rate]='bn.cost' [y_desc]='' [special_check]='bn.special' [check]='bn.check' [w_desc]='bn.desc'></com-bundle-card>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-5">
+
+        </div>
+    </div>
+</div>

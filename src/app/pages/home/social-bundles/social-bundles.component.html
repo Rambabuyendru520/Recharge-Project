@@ -1,0 +1,28 @@
+<div class="container-fluid data-main">
+    <div *ngIf="mobile === false" class="row pt-xs-0">
+        <span>What kind of social bundle are you looking for?</span>
+    </div>
+    <div class="row justify-content-start">
+        <span class="col-12 col-lg-6 nopadding">Which social network?&nbsp;&nbsp;</span>
+        <span class="col-12 col-lg-6 pull-right p-lg-0">{{bundlename}} bundles available:</span>
+    </div>
+    <div class="row pt-2 justify-content-between">
+            <div class="col-12 col-lg-4">
+                <div class="row pt-4">
+    <div class="col-2 col-lg-2 socialicon" *ngFor="let bn of socialbundleArray.results;let idx = index" 
+      [hidden]='hide_icons && mobile_screen'>
+        <div class="bundle-icon">
+            <com-bundle-icon [icon]=bn.icon [color]="bn.click ? bn.color : ''" [name]='' [disabled]=bn.disable (click)='toggleIcon(idx,bn.disable)' [(clicked)]=bn.click></com-bundle-icon>
+        </div>
+    </div>
+      </div>
+      </div>
+        <div class="col-12 col-lg-6 pull-right p-lg-0 p-xs-0">
+            <div class="bundle-list pt-4">
+                <div *ngFor="let bn of bundleArray.results;let idx = index" class='each-card'>
+                    <com-bundle-card (click)="select_bundle(idx)" [color]='bundlecolor' [size]='bn.value' [unit]='bn.name' [rate]='bn.cost' [y_desc]='' [special_check]='bn.special' [check]='bn.check' [w_desc]='bn.desc'></com-bundle-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

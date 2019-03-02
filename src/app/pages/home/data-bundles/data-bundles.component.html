@@ -1,0 +1,37 @@
+<div class="container-fluid data-main">
+    <div *ngIf="mobile === false" class="row">
+        <div class="col nopadding" *ngIf="(databundleArray.subresults)">
+            <span class='which-sms'>What kind of bundle are you looking for?</span>
+        </div>
+    </div>
+    <div class="row pt-4 justify-content-between">
+        <div class="col-12 col-lg-8 nopadding">
+            <div *ngIf="databundleArray.subresults" class="container tab-view">
+                <div class="row px-3">
+                   <div *ngIf="databundleTab[0].subresults.length > 0" class="col  normal-tab" (click)='changeTab(0)' [ngClass]="[tab_state[0] ? 'active-tab' : '']">
+                       <span>{{databundleTab[0].bundleSubType}}</span>
+                   </div>
+                   <div *ngIf="databundleTab[1].subresults.length > 0" class="col  normal-tab" (click)='changeTab(1)' [ngClass]="[tab_state[1] ? 'active-tab' : '']">
+                        <span>{{databundleTab[1].bundleSubType}}</span>
+                    </div>
+                    <div *ngIf="databundleTab[2].subresults.length > 0" class="col  normal-tab" (click)='changeTab(2)' [ngClass]="[tab_state[2] ? 'active-tab' : '']">
+                        <span>{{databundleTab[2].bundleSubType}}</span>
+                    </div>
+                    <div *ngIf="databundleTab[3].subresults.length > 0" class="col  normal-tab" (click)='changeTab(3)' [ngClass]="[tab_state[3] ? 'active-tab' : '']">
+                            <span>{{databundleTab[3].bundleSubType}}</span>
+                    </div>
+                    <div *ngIf="databundleTab[4].subresults.length > 0" class="col  normal-tab" (click)='changeTab(4)' [ngClass]="[tab_state[4] ? 'active-tab' : '']">
+                            <span>{{databundleTab[4].bundleSubType}}</span>
+                    </div>
+                </div>
+            </div>
+            <h4 *ngIf="!(databundleArray.subresults)">No bundles available!</h4>
+            <div *ngIf="databundleArray.subresults" class="bundle-list">
+                <div *ngFor="let bn of databundleArray.subresults;let idx = index" class='each-card mt-3'>
+                    <com-bundle-card (click)="select_bundle(idx)" [color]='bn.color' [size]='bn.value' [unit]='bn.name' [rate]='bn.cost' 
+                    [y_desc]='bn.subdesc' [special_check]='bn.special' [check]='bn.check' [w_desc]='bn.desc'></com-bundle-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+$primary: #ffcc00 !default;
+$info: #20617a !default;
+$success: #b8e986 !default;
+$warning: #dfb81c !default;
+$danger: #ee4a00 !default;
+$layout-bg: #f0f1f0;
+$card-bg: rgb(241, 241, 241);
+$body-bg: #f5f5f5; // default bg color
+$white: #ffffff;
+
+$default-text: #000000;
+$disabled-text: #e8e8e8;
+$help-text: #a9a9a9; // additional text color for hits
+$content-text: $default-text; // content text color on card, panels, form, etc
+$primary-grey: #616161;
+$secondary-grey:#f5f5f5;
+$inactive-grey: #dcdcdc;
+$primary-black: rgba(0, 0, 0, 0.4);
+$footer-bg: #343434;
+
+$label-text: $default-text; // labels color
+$disabled: rgba(255, 255, 255, 0.5); // color for disabled state
+$disabled-bg: tint($disabled, 15%); // background color for disable state
+$border: $primary; // border color
+$border-light: tint($primary, 50%); // lighter version of border color (for hovers)
+$sidenav-border: rgb(229, 183, 0);
+$button-disabled: rgb(232, 232, 232);
+
+$input-background: #fdfdfd; // input background color
+$input-border-default: #969696; // input border color
+$input-border-focus: $info; // input border focus
+$input-border-hover: $input-border-default; // input border color for hover
+$input-border-error: $danger;
+$input-border-filled: $default-text;
+$input-disabled: #e2e3e2;
+$half-black: #7f7f7f;
+$select-background: #e3e3e3;
+
+$primary-light: tint($primary, 30%);
+$info-light: tint($info, 30%);
+$success-light: tint($success, 30%);
+$warning-light: tint($warning, 30%);
+$danger-light: tint($danger, 30%);
+$progressbar-disabled: tint($primary, 70%);
+
+$primary-dark: shade($primary, 15%);
+$info-dark: shade($info, 15%);
+$success-dark: shade($success, 15%);
+$warning-dark: shade($warning, 15%);
+$danger-dark: shade($danger, 15%);
+
+$primary-bg: tint($primary, 20%);
+$success-bg: tint($success, 20%);
+$warning-bg: tint($warning, 20%);
+$danger-bg: tint($danger, 20%);
+
+$mainBgUrl: $assets-root + $images-root + 'sky-bg.jpg';
+
+@mixin body-bg(){
+  background-color: $body-bg;
+  margin: 0;
+}
+.line-break{
+  width: 100%;
+}
+
+// @if $enable-flex {
+//   @each $breakpoint in map-keys($grid-breakpoints) {
+//       @include media-breakpoint-up($breakpoint) {
+//           @for $size from 1 through $grid-columns {
+//               .col-#{$breakpoint}-#{$size} {
+//                   max-width: percentage($size / $grid-columns);
+//               }
+//           }
+//       }
+//   }
+// }

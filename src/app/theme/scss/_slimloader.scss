@@ -1,0 +1,35 @@
+@import './config/config';
+.slim-loading-bar{
+  z-index: 1035;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: $primary;
+}
+.slim-loading-bar-progress{
+
+  background-color: $default-text !important;
+  height: 3px !important;
+}
+
+
+#slimloader{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1003;
+  background: #000000;
+  opacity: 0.5;
+}
+#slimloader > svg{
+  grid-row: 1;
+  grid-column: 1;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+}

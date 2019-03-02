@@ -1,0 +1,90 @@
+@import './config/config';
+
+input {
+  background-color: transparent;
+  border: 0px;
+  line-height: 38px;
+  font-size: $input-hint-font;
+  font-weight: 200;
+  padding:1px 0px 1px 28px;
+}
+.input-wrapper-error{
+  // color: $input-border-error;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+*:focus{
+  outline: none;
+}
+.btn-append{
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  font-size: $input-hint-font;
+  font-weight: 300;
+}
+.input-wrapper{
+  padding: 0px 0px !important;
+  background-color: $input-background;
+  border: 1px solid $input-border-default;
+  // border-radius: 4px;
+}
+.wrapper-focus{
+  border: 1px solid $input-border-focus;
+}
+.wrapper-blur {
+  border: 1px solid $input-border-default;
+}
+.wrapper-error {
+  border: 1px solid $input-border-error;
+}
+.wrapper-filled{
+  border: 1px solid $input-border-filled;
+}
+.wrapper-disable{
+  pointer-events: none;
+  background-color: $input-disabled;
+  border: 1px solid $input-disabled;
+}
+.comp-margin{
+  margin-left:5px;
+}
+.error-msg{
+  font-size: $info-font-size-small;
+  color: $input-border-error;
+  font-weight: $font-thin;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #7F7F7F;
+  font-size: $input-hint-font;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #7F7F7F;
+  font-size: $input-hint-font;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #7F7F7F;
+  font-size: $input-hint-font;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #7F7F7F;
+  font-size: $input-hint-font;
+}
+.r-text-div{
+  background-color: $primary;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  ::-ms-clear {
+    width: 0px;
+    height: 0px;
+ }
+ .btn-append {
+   margin-top: 7px !important;
+ }
+}

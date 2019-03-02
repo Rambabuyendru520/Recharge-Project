@@ -1,0 +1,58 @@
+a{
+    color: #488fc8;
+    cursor: pointer;
+}
+#page{
+    position: relative;
+    min-height: 70vh;
+}
+.footer-div{
+    position: absolute;
+    width: 100%;
+}
+.page-content{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.bundle-icon-row{
+    background-color: white;
+    padding-left: 4%;
+}
+.helpBack{
+    padding-left: 1.9rem !important;
+}
+.anchorhelp{
+    color:rgb(0,0,0) !important;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.modal-text{
+    font-size: 12px;
+    font-weight: 200;
+}
+.modal-content{
+    padding: 4%;
+}
+.which-sms{
+    font-size: 20px;
+    font-weight: 400;
+}
+.whats-avail{
+    font-size: 16px;
+    font-weight: 600;
+}
+@media screen and (max-width: 660px){
+    .bundle-icon-row{
+        padding-left: initial;
+    }
+    #page{
+        min-height: 55vh;
+    }
+}
+

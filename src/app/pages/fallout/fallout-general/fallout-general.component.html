@@ -1,0 +1,74 @@
+<div class="mainPage">
+<div class="col-sm-12 col-md-12 col-lg-12 main desktop">
+    <div class="row">
+        <div class="col-sm-10 col-md-10 col-lg-10 "></div>
+        <div class="col-sm-2 col-md-2 col-lg-2 pt-3">
+            <img class="header-logo" src="{{ASSETS_PATH}}/images/logo-square.png" srcset="{{ASSETS_PATH}}/images/logo-square@2x.png 2x,
+            {{ASSETS_PATH}}/images/logo-square@3x.png 3x">
+        </div>
+        
+    </div>
+    <div class="row Fallout-General">        
+        <div class="col-sm-12 col-md-12 col-lg-6 main-padding">
+            <span class="heading">{{heading}}</span>
+            <div class='line-break'></div>
+            <br>
+
+            <span class="intro-text-2" >{{introText}}</span>
+            <div class='row large_screen'>
+                <div class="col-sm-12 col-md-6 col-lg-6 pt-3">
+                <com-button [label]=btnLabel1 type='primary-white-pad' [disabled]="false" (click)='goToHomePage()'></com-button>
+                <!-- <com-button label='Choose a different bundle' type='primary-white-pad' [disabled]="false"></com-button> -->
+                </div>  
+                </div>  
+          
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-1"></div>
+        <div class="col-sm-12 col-md-12 col-lg-5 bottom_div padding-right">
+            <img   src='{{ASSETS_PATH}}/images/error-1.png'
+            srcset="{{ASSETS_PATH}}/images/error-1@2x.png 2x,
+            {{ASSETS_PATH}}/images/error-1@3x.png 3x" class="Error1">
+            
+            <com-button class='small_screen_1' [label]=btnLabel1 type='primary-white-pad' [disabled]="false" (click)='goToHomePage()'></com-button>
+            <!-- <com-button class='small_screen' label='Choose a different bundle' type='primary-white-pad' [disabled]="false"></com-button> -->
+        </div>
+        
+    </div>
+</div>
+
+<div class="col-sm-12 col-md-12 col-lg-12 main mobile">
+    <div class="row">
+        <div class="col-sm-9 col-md-9 col-lg-10 pt-4">            
+                <span class="heading">{{heading}}</span>
+                <div class='line-break'></div>
+                <br>
+    
+                <span class="intro-text-2" >{{introText}}</span>
+                <!-- <div class='row large_screen'>
+                    <div class="col-sm-12 col-md-6 col-lg-6 pt-3">
+                    <com-button label='Submit again' type='primary-white-pad' [disabled]="false"></com-button>
+                    <com-button label='Go to homepage' type='primary-white-pad' [disabled]="false"></com-button>
+                    </div>  
+                    </div>  -->
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-2 pt-3">
+            <img class="header-logo" src="{{ASSETS_PATH}}/images/logo-square.png" srcset="{{ASSETS_PATH}}/images/logo-square@2x.png 2x,
+            {{ASSETS_PATH}}/images/logo-square@3x.png 3x">
+        </div>
+        
+    </div>
+    <div class="row">        
+        
+        <!-- <div class="col-sm-12 col-md-12 col-lg-1"></div> -->
+        <div class="col-sm-12 col-md-12 col-lg-5 bottom_div padding-right">
+            <img   src='{{ASSETS_PATH}}/images/error-1.png'
+            srcset="{{ASSETS_PATH}}/images/error-1@2x.png 2x,
+            {{ASSETS_PATH}}/images/error-1@3x.png 3x" class="Error1">
+            
+            <com-button class='small_screen_1' [label]=btnLabel1 type='primary-white-pad' [disabled]="false" (click)='goToHomePage()'></com-button>
+            <!-- <com-button class='small_screen' label='Choose a different bundle' type='primary-white-pad' [disabled]="false"></com-button> -->
+        </div>
+        
+    </div>
+</div>
+</div>

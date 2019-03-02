@@ -1,0 +1,50 @@
+@import './config/config';
+
+.active-tab{
+    background-color:  $primary;
+}
+.tab-view{
+    font-size: $card-font-size-small;
+    font-weight: 600;
+}
+.tooltip-heading{
+    font-size: 16px;
+    font-weight: 600;
+}
+.tooltip-text{
+    font-size: 12px;
+}
+.normal-tab{
+    cursor: pointer;
+    padding:7px 3px !important;
+    padding: 0;
+}
+.which-sms{
+    font-size: 20px;
+    font-weight: 400;
+}
+.whats-avail{
+    font-size: 16px;
+    font-weight: 600;
+}
+@media screen and (max-width: $resS){
+    .tab-view{
+        font-size: $card-font-size-x-small;
+        box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.08);
+        padding: 10px 8px 10px 8px;
+    }
+    .p-xs-0{
+        padding: 0 !important;
+    }
+    .normal-tab{
+        cursor: pointer;
+        padding: 12px 5px 12px 5px !important;
+        padding: 0;
+    }
+        font-size: 28px;
+        font-weight: 400;
+    .whats-avail{
+        font-size: 16px;
+        font-weight: 600;
+    }
+}

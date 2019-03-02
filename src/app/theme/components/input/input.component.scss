@@ -1,0 +1,35 @@
+.input-wrapper{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-self: left;
+  border-radius: 25px;
+  border: none;
+}
+.input-box-field{
+  grid-column: 1 / 2;
+  background-color: white !important;
+  width: 100%;
+  border-radius: 25px;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  .input-wrapper{
+    display: -ms-grid;
+    -ms-grid-columns: 1fr auto;
+    height: 38px;
+    border: none;
+  }
+  .input-box-field{
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .close-button{
+    -ms-grid-column: 2;
+  }
+  .label-error{
+    display: none;
+  }
+}
+

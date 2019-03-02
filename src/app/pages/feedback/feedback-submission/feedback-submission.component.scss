@@ -1,0 +1,212 @@
+
+.section{
+    height: fit-content;
+    min-height: 100vh;
+    background-color: white
+    // overflow-y: scroll;
+}
+.contentDesktop{
+    background-color: #f5f5f5;
+    margin: 0px;
+    // display: block;
+}
+.contentMobile{
+   display: none;
+}
+
+.main-padding{
+  background-color: transparent;
+    padding: 2% 0% 0% 3%;
+}
+
+.mat-expansion-panel-header-description, .mat-expansion-panel-header-title {
+    display: grid;
+    grid-gap: 0px 5px;
+  }
+  
+  .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]).cdk-keyboard-focused, .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]).cdk-program-focused, .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]):hover {
+    background: transparent;    
+  }
+
+  .mat-expansion-panel{
+    box-shadow: none !important;
+  }
+  
+  .mat-expansion-panel-header {
+    padding: 0px !important;
+    font-weight: 600;
+  }
+  .mat-expansion-panel-body {
+    padding: 0px 0px 0px 0px !important;
+    background-color: white;
+    font-weight: 200;
+    font-size: 14px;
+}
+  .accordian-title-padding{
+    padding-top: 10px;
+  }
+
+  .main-title{
+    line-height: 1.1;
+    letter-spacing: -0.7px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .orderNum{
+    font-weight: 200;    
+    font-size: 14px;
+    padding-top: 2%;
+  }
+
+  .image{
+    padding-top: 10%;
+    width: 90%;
+  }
+
+  .br-stars .br-unit{
+    width: 50px;
+    height: 45px;
+  }
+  .feedback{
+    background-color: white;
+    overflow: hidden;
+    font-size: 14px;
+    width: 80%;
+    max-height: 100px;
+    // height: fit-content;
+    border-radius: 25px;
+    padding: 3% 4%;
+    resize: none;
+    font-weight: 200;
+    z-index: 1000;
+  }
+  .br-stars .br-unit {
+    background-image: url('/appassets/images/feedback-star.svg');
+  }
+  .feedbackLen{
+    position: relative;
+    // bottom: 0;
+    top: -30px;
+    right: 25%;
+    font-weight: 200;
+    font-size: 10px;
+
+    z-index: 1001;
+    background-color: transparent;
+    text-align: right;
+  }
+
+  .submitBtn{
+    width: 60%;
+  }
+
+  .footer{
+      background-color: white;
+      // padding: 5% 0% 5% 0%;
+      padding: 2% 2% 2% 3%;
+      // position: absolute;
+      // bottom: 0px;
+      // width: 100%;
+  }
+
+  .title{
+    padding: 1% 0% 2% 0%;
+    font-size: 20px;
+  }
+
+  @media screen and (max-width:1366px){
+
+    .image{
+      padding-top: 15%;
+      width: 100%;
+    }
+
+    .main-padding{
+      padding: 3% 0px 0% 3%;
+  }
+
+  .footer{
+    background-color: white;
+    // padding: 5% 0% 5% 0%;
+    padding: 3% 2% 4% 3%;
+    // position: absolute;
+    // bottom: 0px;
+    // width: 100%;
+}
+
+  }
+  @media screen and (max-width:800px){
+
+    .section{
+     overflow-y: scroll;
+     height: 100vh !important;
+  }
+    .contentDesktop{
+      display: none;     
+    }
+
+    .contentMobile{
+    background-color: #f5f5f5;
+    display: flex;
+    margin: 0%;
+    }
+
+    .main-padding{
+      padding: 5% 0px 5% 2%;
+  }
+
+    .submitBtn{
+      width: 100%;
+      // padding-bottom: 5%;
+    }
+    .feedback{
+      overflow: hidden;
+      font-size: 12px;
+      width: 100%;
+    }
+  
+    .title{
+      padding: 0% 0% 4% 0%;
+      // font-size: 20px;
+    }
+
+    .feedbackLen{    
+      top: -30px;
+      right: 5%; 
+    }
+
+    .footer{
+      background-color: white;
+      // padding: 5% 0% 5% 0%;
+      padding: 4% 2% 5% 3%;
+      // position: absolute;
+      // bottom: 0px;
+      // width: 100%;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  // / IE10+ CSS styles go here /
+
+  .br-stars .br-unit{    
+    background-image: url("/appassets/images/rating_inactive.svg")
+  }
+
+  .br-stars .br-selected, .br-stars .br-active{
+    background-image: url("/appassets/images/rating_active.svg")
+  }
+}
+@supports (-ms-accelerator:true) {
+  // / Edge 16+ CSS styles go here /
+  .main-title{
+    margin-top: 5%;
+  }
+}
+
+@supports (-ms-ime-align: auto) {
+  // / Edge 12-15 CSS styles go here /
+  .main-title{
+    margin-top: 5%;
+  }
+}

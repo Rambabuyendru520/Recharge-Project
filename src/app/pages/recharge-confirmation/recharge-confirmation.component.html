@@ -1,0 +1,132 @@
+<div id='page' class='page'>
+    <div class="header-div">
+      <com-header [header_text]="header_text" id='header' (click)='backButtonRedirection()'></com-header>
+    </div>
+    <div class='page-content'>
+      <ng-template #ReadMe class='readmeTemplate' let-c="close" let-d="dismiss">
+        <div class="modal-header">
+          <h4 class="modal-title">T’s and C’s</h4>
+          <button type="button" class="closeSymbolModalButton close" aria-label="Close" (click)="d('Cross click')">
+            <span class='closeSymbolModalSpan' aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" [id]="printableArea">
+          <p class='MTNTandC'>MTN Terms and Conditions</p>
+          <p class='MTNOnlineShoppingTandC'>MTN Online Shop Purchasing Terms and Conditions (“Terms and Conditions”)</p>
+          <p class='Note'>NOTE:</p>
+          <div *ngFor="let item of TnC">
+            <p class='contentNumberHeader'>{{item.id}}</p>
+            <p class='contentNumberText' [innerHTML]='item.value'></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class='col-xs-4 col-sm-3 col-md-3 col-lg-3 noPaddingRight paddingMobile'>
+            <com-button type="inactive" label="Print" class='buttonPrint' (click)="PrintPage(printableArea)"></com-button>
+          </div>
+          <div class='col-xs-4 col-sm-5 col-md-3 col-lg-3 noPaddingRight paddingMobile'>
+            <com-button type="inactive" label="Save PDF" class='buttonSavePDF' (click)="savePDF()"></com-button>
+          </div>
+          <div class='col-md-3 col-lg-3  extraDivButton'></div>
+          <div class='col-xs-4 col-sm-3 col-md-3 col-lg-3 noPaddingLeft'>
+            <com-button type="primary" label="Close" class='buttonCloseModal' (click)="c('Close click')"></com-button>
+          </div>
+        </div>
+      </ng-template>
+      <!-- Main Page  -->
+      <div class="main">
+        <div class="container-fluid nopadding">
+        <div class="row justify-content-between noMargin">
+          <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 desktopscreen noPadding">
+              <div class="row noMargin">
+                <mat-card class='rechargeCard'>
+                  <p class='rechargeCardHeading'>Your recharge:</p>
+                  <div class='row noMargin justify-content-between' *ngFor='let item of Individual_Items'>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-9 rechargeIndividualItem noPadding">{{item.Individual_ItemName}}</div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 rechargeIndividualValue noPadding">R{{item.Individual_Value}}</div>
+                  </div>
+                  <hr class='my-3'>
+                  <div class='row noMargin'>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 rechargeTotalText noPadding">Total</div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 noPadding">
+                      <div class="row noMargin">
+                        <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadding rechargeTotalValue'>R{{Total_Value}}</div>
+                      </div>
+                      <div class="row noMargin">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadding rechargeVATValue">{{VAT_Value}}</div>
+                      </div>
+                    </div>
+                  </div>
+                </mat-card>
+              </div>
+              <br>
+              <div class="row noMargin">
+                <span class='emailText pl-1'>Email address</span>
+              </div>
+              <div class="row noMargin">
+                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-6 noPadding">
+                  <form [formGroup]='emailForm'>
+                    <com-input formControlName='email' placeholder='Eg. john@example.co.za' value='' type='email'></com-input>
+                  </form>
+                  <form #form id='payForm' method='post' [action]='paygateURL'>
+                    <input type='hidden' name='order_no' value='' id='order_no'>
+                    <input type='hidden' name='msisdn' value='' id='msisdn'>
+                    <input type='hidden' name='amount' value='' id='amount'>
+                    <input type='hidden' name='vas_code' value='' id='vas_code'>
+                    <input type='hidden' name='facing_name' value='' id='facing_name'>
+                    <input type='hidden' name='chargeable' value='' id='chargeable'>
+                    <input type='hidden' name='email' value='' id='email'>
+                    <input type='hidden' name='trans_type' value='' id='trans_type'>
+                  </form>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 noPadding">
+                  <ng-template #popContent class='tooltipContent'>
+                    <div class="container px-4 py-2">
+                      <div class="row">
+                        <div class="col-10 nopadding">
+                          <span>Giving us your email address makes payments quicker and more secure</span>
+                        </div>
+                        <div class="col-2 nopadding">
+                          <div class="text-right">
+                              <i class="fa fa-1x fa-times" (click)='pd.close()'></i>
+                              <!-- <i class="fa fa-1x fa-times d-block d-md-none" (click)='pm.close()'></i> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ng-template>
+                  <!-- <button type="button" class="btn btn-outline-secondary mr-2 tooltipButton d-none d-md-block" placement="right-bottom" popover-class="increase-popover-width"  
+                  [ngbPopover]="popContent"  #pd="ngbPopover">?</button>
+                  <button type="button" class="btn btn-outline-secondary mr-2 tooltipButton d-block d-md-none" placement="left-bottom" popover-class="increase-popover-width"  
+                  [ngbPopover]="popContent"  #pm="ngbPopover">?</button> -->
+                <div class='col-md-2 col-lg-2' [placement]="popover_placement" popover-class="increase-popover-width" [ngbPopover]="popContent"
+                  #pd="ngbPopover">
+                  <img class='tooltip-image pl-2' src='{{ASSETS_PATH}}/images/tooltip.svg'/>
+                  </div>
+                </div>
+                <!-- <div class=""></div> -->
+              </div>
+            <br>
+            <div class="row noMargin">
+              <div class="col-12 col-md-12 col-lg-9 noPadding">
+                  <com-checkbox [checked]='checked_readTnC' class='readTnC' (primLabelclickEmit)='checkReadTnC($event)' (secLabelclickEmit)='openVerticallyCentered(ReadMe)' [disabled]="disabledCheckBox_readTnc" label='I agree to MTN’s' labelHighlight='Terms and Conditions'></com-checkbox>
+              </div>
+            </div>
+            <div class="row noMargin">
+              <div class="col-xs-12 col-sm-12 col-md-10 col-lg-6 noPadding">
+                <!-- <com-button type='secondary' label="Read T's and C's" class='buttonRead' (click)='openVerticallyCentered(ReadMe)'></com-button> -->
+                <com-button type='primary' label="Buy now" class='buttonAgree' (click)='agreeTnC(emailForm)' [disabled]="!emailForm.valid || emailForm.get('email').hasError('pattern') || emailForm.get('email').hasError('email') || !checked_readTnC"></com-button>
+              </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 mobilescreen"></div>
+            <div class="col-md-4 col-lg-4 noPadding mobilescreen" [hidden]='mobile_screen'>
+              <!-- <span class="sideImage"></span> -->
+                <img class='sideImage' src='{{ASSETS_PATH}}/images/sales-enablement-illustrations-5-3.png'
+                srcset="{{ASSETS_PATH}}/images/sales-enablement-illustrations-5-3@2x.png 2x,
+                {{ASSETS_PATH}}/images/sales-enablement-illustrations-5-3@3x.png 3x" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

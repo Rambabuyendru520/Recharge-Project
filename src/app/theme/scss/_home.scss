@@ -1,0 +1,47 @@
+@import './config/config';
+
+.wrapper {
+  background-color: $primary;
+}
+
+.title-cls{
+  font-size: $layout-font-size-large;
+  font-weight: 600;
+}
+.mat-card-title{
+  font-size: $card-font-size-small;
+}
+.backLogin{
+	color: white;
+}
+.loginLink{
+	padding-left: 24px;
+}
+.backLoginText{
+	font-size: $nav-font-size-medium !important;
+	padding-left: 10px;
+	vertical-align : 25%;
+}
+
+@media screen and (max-width: $resS){
+ .title-cls{
+   font-size: $title-font-size-medium;
+ }
+ .wrapper{
+   width: 100%;
+ }
+  .mat-card {
+    width: 280px !important;
+  }
+  .pt-5, .py-5 {
+    padding-top: 1rem !important;
+  }
+}
+
+@media screen and (max-width: $resMin){
+  .title-cls{
+    font-size: $title-font-size-small;
+  }
+}
+
+
